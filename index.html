@@ -1,15 +1,162 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Titanic View</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Titanic View</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div
+			style="
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			"
+		>
+			<div id="titanic"></div>
 
-    <div id="titanic"></div>
+			<!-- Legend Box -->
+			<div class="bottom-wrapper">
+				<div class="legend">
+					<h1>Legend</h1>
+					<!-- Embarked Destinations Section -->
+					<h2 class="section">Embarked Destinations</h2>
+					<ul class="row">
+						<li class="row">
+							S
+							<div
+								style="
+									height: 20px;
+									min-width: 20px;
+									margin-left: 20%;
+									background-color: gold;
+								"
+							></div>
+						</li>
+						<li class="row">
+							C
+							<div
+								style="
+									height: 20px;
+									min-width: 20px;
+									margin-left: 20%;
+									background-color: teal;
+								"
+							></div>
+						</li>
+						<li class="row">
+							Q
+							<div
+								style="
+									height: 20px;
+									min-width: 20px;
+									margin-left: 20%;
+									background-color: pink;
+								"
+							></div>
+						</li>
+					</ul>
+					<!-- Gender Section -->
+					<h2 class="section">Gender</h2>
+					<ul class="row">
+						<!-- Female -->
+						<li class="row">
+							Female
+							<div
+								style="
+									border: 1px black solid;
+									border-radius: 200px;
+									height: 20px;
+									min-width: 20px;
+									margin-left: 20%;
+								"
+							></div>
+						</li>
 
-    <script src="script.js" type="module"></script>
-  </body>
+						<!-- Male -->
+						<li class="row">
+							Male
+							<div
+								style="
+									border: 1px black solid;
+									height: 20px;
+									min-width: 20px;
+									margin-left: 20%;
+								"
+							></div>
+						</li>
+					</ul>
+					<!-- Survival Status Section -->
+					<h2 class="section">Survival Status</h2>
+					<ul class="row">
+						<li class="row">
+							Alive
+							<div
+								style="
+									border: 1px black solid;
+									height: 20px;
+									min-width: 20px;
+									margin-left: 20%;
+									background-color: black;
+								"
+							></div>
+						</li>
+						<li class="row">
+							Deceased
+							<div
+								style="
+									border: 1px black solid;
+									height: 20px;
+									min-width: 20px;
+									margin-left: 20%;
+									background-color: black;
+									opacity: 30%;
+								"
+							></div>
+						</li>
+					</ul>
+					<!-- Age Section -->
+					<h2 class="section">Age</h2>
+					<ul class="row">
+						<li class="row">
+							Oldest
+
+							<div id="biggest-age"></div>
+						</li>
+						<li class="row">
+							Youngest
+
+							<div id="smallest-age"></div>
+						</li>
+					</ul>
+				</div>
+				<div class="legend">
+					<h1>Stats</h1>
+					<ul class="row">
+						<h3 class="h3-label">Passengers:</h3>
+						<h3 id="num-passengers"></h3>
+					</ul>
+					<ul class="row">
+						<h3 class="h3-label">Survived:</h3>
+						<h3 id="num-survived"></h3>
+					</ul>
+					<ul class="row">
+						<h3 class="h3-label">Deceased:</h3>
+						<h3 id="num-dead"></h3>
+					</ul>
+					<ul class="row">
+						<h3 class="h3-label">Female:</h3>
+						<h3 id="num-female"></h3>
+					</ul>
+					<ul class="row">
+						<h3 class="h3-label">Male:</h3>
+						<h3 id="num-male"></h3>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="script.js" type="module"></script>
+	</body>
 </html>
